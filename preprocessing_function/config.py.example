@@ -1,8 +1,3 @@
-# Config for file_processing
-TOPIC_SETTINGS = {
-    'topic_name': 'my-topic-name'
-}
-
 MEDIA_TYPE = 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet'
 
 INBOX = 'my-bucket'
@@ -12,18 +7,6 @@ COLUMN_MAPPING = {
     'Column 1': 'column_one',
     'Column 2': 'column_two'
 }
-
-# Columns without personal data
-COLUMNS_NONPII = [
-    'column_one',
-    'column_two'
-]
-
-# Columns to be hashed after renaming. If none, then COLUMNS_HASH should not be declared
-COLUMNS_HASH = [
-    'column_one,
-    'column_two
-]
 
 
 # Original incomming file to be deleted from bucket by function when finished or
