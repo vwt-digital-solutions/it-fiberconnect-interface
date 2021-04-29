@@ -39,7 +39,7 @@ def df_from_store(bucket_name, blob_name):
             json_elements = getattr(config, "JSON_ELEMENTS", [])
             bucket = storage.Client().get_bucket(bucket_name)
             blob = storage.Blob(blob_name, bucket)
-            content = blob.download_as_bytes()
+            content = blob.download_as_string()
             data = json.loads(content.decode("utf-8"))
             for el in json_elements:
                 data = data[el]
